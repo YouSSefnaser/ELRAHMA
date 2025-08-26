@@ -3,9 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Masonry from 'react-masonry-css';
-import { PhotoAlbum } from 'react-photo-album';
+import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
-import "yet-another-react-lightbox/styles.css";
 import { Button } from '@/components/ui/button';
 import { EnhancedImage } from '@/components/ui/enhanced-image';
 

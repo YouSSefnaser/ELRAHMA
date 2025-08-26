@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Cairo, Inter, Outfit } from 'next/font/google';
 import './globals.css';
+import 'yet-another-react-lightbox/styles.css';
 import { cn } from '@/lib/utils';
 import { Navigation } from '@/components/layout/navigation';
 import { Footer } from '@/components/layout/footer';
