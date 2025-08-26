@@ -44,9 +44,9 @@
 
 :root {
   /* Cinematic Dubai Photography Brand Colors */
-  --bg-color: #0B1020;
-  --text-color: #F6F7FB;
-  --accent-color: #D4AF37;
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --accent-color: #eab308;
   --secondary-color: #7C4DFF;
 
   /* Light mode - ألوان فاتحة */
@@ -109,7 +109,7 @@ html {
 }
 
 body {
-  background: var(--bg-color);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
   color: var(--text-color);
   font-family: var(--font-cairo), sans-serif;
   overflow-x: hidden;
@@ -159,9 +159,9 @@ body::before {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(124, 77, 255, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(234, 179, 8, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(124, 77, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.04) 0%, transparent 50%);
   pointer-events: none;
   z-index: 1;
   animation: float 20s ease-in-out infinite;
@@ -257,9 +257,10 @@ html {
 
 /* Glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover effects */
@@ -282,7 +283,7 @@ html {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #D4AF37 0%, #7C4DFF 100%);
+  background: linear-gradient(135deg, #eab308 0%, #7C4DFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

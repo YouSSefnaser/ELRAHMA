@@ -8,32 +8,32 @@ import { cn } from '@/lib/utils';
 const reels = [
   {
     id: 1,
-    title: 'أزياء الرحامة الفاخرة',
-    category: 'أزياء',
+    title: 'Luxury Fashion Collection',
+    category: 'Fashion',
     thumbnail: '/videos/thumbnails/fashion-reel.jpg',
     video: '/videos/fashion-reel.mp4',
     duration: '2:30',
   },
   {
     id: 2,
-    title: 'قصة العلامة التجارية',
-    category: 'علامة تجارية',
+    title: 'Brand Story Documentary',
+    category: 'Branding',
     thumbnail: '/videos/thumbnails/branding-reel.jpg',
     video: '/videos/branding-reel.mp4',
     duration: '1:45',
   },
   {
     id: 3,
-    title: 'تصوير المنتجات السينمائي',
-    category: 'منتجات',
+    title: 'Cinematic Product Photography',
+    category: 'Products',
     thumbnail: '/videos/thumbnails/products-reel.jpg',
     video: '/videos/products-reel.mp4',
     duration: '2:15',
   },
   {
     id: 4,
-    title: 'توثيق الفعاليات',
-    category: 'فعاليات',
+    title: 'Event Documentation',
+    category: 'Events',
     thumbnail: '/videos/thumbnails/events-reel.jpg',
     video: '/videos/events-reel.mp4',
     duration: '3:00',
@@ -66,8 +66,8 @@ export function ShowreelSection() {
   };
 
   return (
-    <section id="showreel" className="section-padding bg-bg-primary">
-      <div className="container-padding">
+    <section id="showreel" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -76,13 +76,13 @@ export function ShowreelSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-display font-cairo font-bold text-text-primary mb-6">
-            معرض <span className="gradient-text">الفيديوهات</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Featured <span className="text-yellow-500">Showreel</span>
           </h2>
-          <p className="text-xl text-text-primary/70 max-w-3xl mx-auto">
-            اكتشف أسلوبنا السينمائي في التصوير الفاخر من خلال
-            هذه المجموعة المختارة من الفيديوهات التي تعرض خبرتنا في مختلف
-            المجالات.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover our cinematic style in luxury photography through
+            this curated collection of videos showcasing our expertise across
+            various fields.
           </p>
         </motion.div>
 
@@ -95,7 +95,7 @@ export function ShowreelSection() {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <div className="relative aspect-video rounded-2xl overflow-hidden glass">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-white shadow-2xl">
               <video
                 ref={videoRef}
                 className="w-full h-full object-cover"
@@ -111,27 +111,27 @@ export function ShowreelSection() {
               <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity">
                 <button
                   onClick={togglePlay}
-                  className="w-20 h-20 rounded-full bg-accent-gold/90 flex items-center justify-center hover:bg-accent-gold transition-colors hover-lift"
+                  className="w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
                 >
                   {isPlaying ? (
-                    <Pause className="h-8 w-8 text-bg-primary" />
+                    <Pause className="h-8 w-8 text-gray-900" />
                   ) : (
-                    <Play className="h-8 w-8 text-bg-primary ml-1" />
+                    <Play className="h-8 w-8 text-gray-900 ml-1" />
                   )}
                 </button>
               </div>
 
               {/* Video Info */}
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="glass backdrop-blur-md rounded-lg p-4">
-                  <h3 className="text-xl font-semibold text-text-primary mb-2">
+                <div className="bg-white/90 backdrop-blur-md rounded-lg p-4 shadow-lg">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {activeReel.title}
                   </h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-accent-gold font-medium">
+                    <span className="text-yellow-600 font-semibold">
                       {activeReel.category}
                     </span>
-                    <span className="text-text-primary/70">
+                    <span className="text-gray-600">
                       {activeReel.duration}
                     </span>
                   </div>
@@ -153,10 +153,10 @@ export function ShowreelSection() {
                 key={reel.id}
                 onClick={() => handleReelChange(reel)}
                 className={cn(
-                  'w-full text-left p-4 rounded-xl transition-all hover-lift group',
+                  'w-full text-left p-4 rounded-xl transition-all transform hover:scale-105 group',
                   activeReel.id === reel.id
-                    ? 'glass border-accent-gold/50'
-                    : 'glass hover:border-accent-gold/30'
+                    ? 'bg-yellow-50 border-2 border-yellow-400 shadow-lg'
+                    : 'bg-white hover:bg-gray-50 border border-gray-200 shadow-sm hover:shadow-md'
                 )}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -175,14 +175,14 @@ export function ShowreelSection() {
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-text-primary group-hover:text-accent-gold transition-colors truncate">
+                    <h4 className="font-semibold text-gray-900 group-hover:text-yellow-600 transition-colors truncate">
                       {reel.title}
                     </h4>
                     <div className="flex items-center justify-between mt-1">
-                      <span className="text-sm text-text-primary/60">
+                      <span className="text-sm text-gray-500">
                         {reel.category}
                       </span>
-                      <span className="text-sm text-text-primary/60">
+                      <span className="text-sm text-gray-500">
                         {reel.duration}
                       </span>
                     </div>

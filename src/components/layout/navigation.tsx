@@ -11,13 +11,13 @@ import { Button } from '@/components/ui/button';
 import { ThemeToggleStandalone } from '@/components/ui/theme-toggle-standalone';
 
 const navItems = [
-  { href: '/', label: 'الرئيسية' },
-  { href: '/portfolio', label: 'المعرض' },
-  { href: '/videos', label: 'الفيديوهات' },
-  { href: '/services', label: 'الخدمات' },
-  { href: '/about', label: 'من نحن' },
-  { href: '/blog', label: 'المدونة' },
-  { href: '/contact', label: 'تواصل معنا' },
+  { href: '/', label: 'Home' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/videos', label: 'Videos' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export function Navigation() {
@@ -51,14 +51,13 @@ export function Navigation() {
             <Image
               src="/logo.png"
               alt="El Rahama Photography"
-              width={40}
-              height={40}
+              width={60}
+              height={60}
               priority
               className="transition-transform group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-accent-gold/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <span className="text-xl font-bold font-cairo gradient-text">El Rahama</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -87,7 +86,7 @@ export function Navigation() {
         <div className="hidden md:flex items-center space-x-3">
           <ThemeToggleStandalone />
           <Button asChild variant="outline" size="sm">
-            <Link href="/contact">احصل على عرض</Link>
+            <Link href="/contact">Get Quote</Link>
           </Button>
         </div>
 
