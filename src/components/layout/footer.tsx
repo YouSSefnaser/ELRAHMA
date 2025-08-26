@@ -6,19 +6,19 @@ import { motion } from 'framer-motion';
 
 const footerLinks = {
   services: [
-    { label: 'تصوير الأزياء', href: '/services#fashion' },
-    { label: 'تصوير المنتجات', href: '/services#products' },
-    { label: 'تصوير العلامات التجارية', href: '/services#branding' },
-    { label: 'تصوير الفعاليات', href: '/services#events' },
-    { label: 'المونتاج والتحرير', href: '/services#retouching' },
+    { label: 'Fashion Photography', href: '/services#fashion' },
+    { label: 'Product Photography', href: '/services#products' },
+    { label: 'Brand Photography', href: '/services#branding' },
+    { label: 'Event Photography', href: '/services#events' },
+    { label: 'Post-Production', href: '/services#retouching' },
   ],
   company: [
-    { label: 'من نحن', href: '/about' },
-    { label: 'المعرض', href: '/portfolio' },
-    { label: 'الفيديوهات', href: '/videos' },
-    { label: 'المدونة', href: '/blog' },
-    { label: 'تواصل معنا', href: '/contact' },
-    { label: 'سياسة الخصوصية', href: '/privacy' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Videos', href: '/videos' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Privacy Policy', href: '/privacy' },
   ],
   contact: [
     {
@@ -53,7 +53,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-bg-primary/95 backdrop-blur-sm border-t border-white/10">
+    <footer className="bg-gray-50 backdrop-blur-sm border-t border-gray-200">
       <div className="container-padding section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
@@ -74,8 +74,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-text-primary/70 mb-6 leading-relaxed">
-              استوديو الرحامة للتصوير السينمائي الفاخر والعلامات التجارية في دبي،
-              متخصصون في التميز التحريري وسرد قصص العلامات التجارية.
+              El Rahama Photography - Dubai's premier cinematic photography studio,
+              specializing in editorial excellence and luxury brand storytelling.
             </p>
             <div className="flex space-x-4">
               {footerLinks.social.map((item) => (
@@ -101,7 +101,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold text-text-primary mb-6">
-              الخدمات
+              Services
             </h3>
             <ul className="space-y-3">
               {footerLinks.services.map((item) => (
@@ -125,7 +125,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold text-text-primary mb-6">
-              الشركة
+              Company
             </h3>
             <ul className="space-y-3">
               {footerLinks.company.map((item) => (
@@ -149,7 +149,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-semibold text-text-primary mb-6">
-              تواصل معنا
+              Contact Us
             </h3>
             <ul className="space-y-4">
               {footerLinks.contact.map((item) => (
@@ -176,15 +176,14 @@ export function Footer() {
           className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <p className="text-text-primary/60 text-sm">
-            © {new Date().getFullYear()} الرحامة للتصوير. جميع الحقوق
-            محفوظة.
+            © {new Date().getFullYear()} El Rahama Photography. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-sm text-text-primary/60">
-            <Link href="/privacy" className="hover:text-accent-gold transition-colors">
-              سياسة الخصوصية
+            <Link href="/privacy" className="hover:text-yellow-600 transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-accent-gold transition-colors">
-              شروط الخدمة
+            <Link href="/terms" className="hover:text-yellow-600 transition-colors">
+              Terms of Service
             </Link>
           </div>
         </motion.div>
